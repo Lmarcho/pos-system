@@ -1,0 +1,796 @@
+[2019-12-29 12:26:34] local.ERROR: There are no commands defined in the "ui" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"ui\" namespace. at /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php:598)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(651): Symfony\\Component\\Console\\Application->findNamespace('ui')
+#1 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(236): Symfony\\Component\\Console\\Application->find('ui:auth')
+#2 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2019-12-29 12:26:40] local.ERROR: Command "make:auth" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:auth\" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php:670)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(236): Symfony\\Component\\Console\\Application->find('make:auth')
+#1 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-12-29 12:26:54] local.ERROR: There are no commands defined in the "passport" namespace. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"passport\" namespace. at /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php:598)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(651): Symfony\\Component\\Console\\Application->findNamespace('passport')
+#1 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(236): Symfony\\Component\\Console\\Application->find('passport:instal...')
+#2 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2019-12-29 12:27:37] local.ERROR: SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost' (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1698): SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost' (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE') at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#14 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 1698): SQLSTATE[HY000] [1698] Access denied for user 'root'@'localhost' at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(949): Illuminate\\Database\\Connection->getPdo()
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(404): Illuminate\\Database\\Connection->getReadPdo()
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(330): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#24 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2019-12-29 12:47:00] local.ERROR: syntax error, unexpected '@', expecting ']' {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): syntax error, unexpected '@', expecting ']' at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:41)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/composer/ClassLoader.php(322): Composer\\Autoload\\includeFile('/home/lakshitha...')
+#1 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('Illuminate\\\\Data...')
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(7): spl_autoload_call('Illuminate\\\\Data...')
+#3 /home/lakshitha/Program/pos/pos/vendor/composer/ClassLoader.php(444): include('/home/lakshitha...')
+#4 /home/lakshitha/Program/pos/pos/vendor/composer/ClassLoader.php(322): Composer\\Autoload\\includeFile('/home/lakshitha...')
+#5 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('Illuminate\\\\Data...')
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(242): spl_autoload_call('Illuminate\\\\Data...')
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnector(Array)
+#8 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(949): Illuminate\\Database\\Connection->getPdo()
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(404): Illuminate\\Database\\Connection->getReadPdo()
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(330): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#17 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#21 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#23 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#24 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#26 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#27 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#28 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 {main}
+"} 
+[2019-12-29 12:47:14] local.ERROR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE') at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#14 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(949): Illuminate\\Database\\Connection->getPdo()
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(404): Illuminate\\Database\\Connection->getReadPdo()
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(330): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#24 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2019-12-29 12:57:38] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'laravel' (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'laravel' (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE') at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#14 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'laravel' at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'root', 'lakshitha@14', Array)
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', 'lakshitha@14', Array)
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(949): Illuminate\\Database\\Connection->getPdo()
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(404): Illuminate\\Database\\Connection->getReadPdo()
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(330): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#24 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2019-12-29 12:58:42] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'laravel' (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'laravel' (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE') at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#14 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'laravel' at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=127....', 'root', 'lakshitha@14', Array)
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', 'lakshitha@14', Array)
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(949): Illuminate\\Database\\Connection->getPdo()
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(404): Illuminate\\Database\\Connection->getReadPdo()
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(330): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(338): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#21 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#24 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2019-12-29 13:05:46] local.ERROR: Command "make:auth" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:auth\" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php:670)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(236): Symfony\\Component\\Console\\Application->find('make:auth')
+#1 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-12-29 13:14:12] local.ERROR: Command "make:auth" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    ui:auth {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:auth\" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    ui:auth at /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php:670)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(236): Symfony\\Component\\Console\\Application->find('make:auth')
+#1 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-12-29 13:26:18] local.ERROR: Command "make:auth" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    ui:auth {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:auth\" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    ui:auth at /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php:670)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(236): Symfony\\Component\\Console\\Application->find('make:auth')
+#1 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2020-01-03 12:38:23] local.ERROR: could not find driver (SQL: PRAGMA foreign_keys = ON;) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): could not find driver (SQL: PRAGMA foreign_keys = ON;) at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(464): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(266): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(33): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(278): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/lakshitha...', '', Array)
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/lakshitha...', '', Array)
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(131): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(86): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(199): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#14 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#21 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 {main}
+
+[previous exception] [object] (PDOException(code: 0): could not find driver at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('sqlite:/home/la...', NULL, NULL, Array)
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('sqlite:/home/la...', NULL, NULL, Array)
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(37): Illuminate\\Database\\Connectors\\Connector->createConnection('sqlite:/home/la...', Array, Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(218): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(457): Illuminate\\Database\\Connection->getPdo()
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('PRAGMA foreign_...', Array)
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(464): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(266): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(33): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(278): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/lakshitha...', '', Array)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/lakshitha...', '', Array)
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(131): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(86): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#17 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(199): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#21 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#22 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#23 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#24 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#26 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#29 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2020-01-03 12:43:01] local.ERROR: could not find driver (SQL: PRAGMA foreign_keys = ON;) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): could not find driver (SQL: PRAGMA foreign_keys = ON;) at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(464): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(266): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(33): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(278): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/lakshitha...', '', Array)
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/lakshitha...', '', Array)
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(131): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(86): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(199): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#14 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#21 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 {main}
+
+[previous exception] [object] (PDOException(code: 0): could not find driver at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('sqlite:/home/la...', NULL, NULL, Array)
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('sqlite:/home/la...', NULL, NULL, Array)
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(37): Illuminate\\Database\\Connectors\\Connector->createConnection('sqlite:/home/la...', Array, Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(218): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(457): Illuminate\\Database\\Connection->getPdo()
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('PRAGMA foreign_...', Array)
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(464): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(266): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(33): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(278): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/lakshitha...', '', Array)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/lakshitha...', '', Array)
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(131): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(86): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#17 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(199): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#21 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#22 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#23 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#24 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#26 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#29 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2020-01-03 12:45:58] local.ERROR: could not find driver (SQL: PRAGMA foreign_keys = ON;) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): could not find driver (SQL: PRAGMA foreign_keys = ON;) at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php:669)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(464): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(266): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(33): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(278): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/lakshitha...', '', Array)
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/lakshitha...', '', Array)
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(131): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(86): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(199): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#14 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#17 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#21 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 {main}
+
+[previous exception] [object] (Doctrine\\DBAL\\Driver\\PDOException(code: 0): could not find driver at /home/lakshitha/Program/pos/pos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:31)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('sqlite:/home/la...', NULL, NULL, Array)
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('sqlite:/home/la...', NULL, NULL, Array)
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(37): Illuminate\\Database\\Connectors\\Connector->createConnection('sqlite:/home/la...', Array, Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(218): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(457): Illuminate\\Database\\Connection->getPdo()
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('PRAGMA foreign_...', Array)
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(464): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(266): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(33): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(278): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/lakshitha...', '', Array)
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/lakshitha...', '', Array)
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(131): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(86): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#17 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(199): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#21 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#22 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#23 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#24 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#26 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#29 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+
+[previous exception] [object] (PDOException(code: 0): could not find driver at /home/lakshitha/Program/pos/pos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php:27)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOConnection.php(27): PDO->__construct('sqlite:/home/la...', '', '', Array)
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(67): Doctrine\\DBAL\\Driver\\PDOConnection->__construct('sqlite:/home/la...', NULL, NULL, Array)
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('sqlite:/home/la...', NULL, NULL, Array)
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(37): Illuminate\\Database\\Connectors\\Connector->createConnection('sqlite:/home/la...', Array, Array)
+#4 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(218): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#5 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(924): call_user_func(Object(Closure))
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(457): Illuminate\\Database\\Connection->getPdo()
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(662): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('PRAGMA foreign_...', Array)
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(629): Illuminate\\Database\\Connection->runQueryCallback('PRAGMA foreign_...', Array, Object(Closure))
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connection.php(464): Illuminate\\Database\\Connection->run('PRAGMA foreign_...', Array, Object(Closure))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(266): Illuminate\\Database\\Connection->statement('PRAGMA foreign_...')
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/SQLiteConnection.php(33): Illuminate\\Database\\Schema\\Builder->enableForeignKeyConstraints()
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(278): Illuminate\\Database\\SQLiteConnection->__construct(Object(Closure), '/home/lakshitha...', '', Array)
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(76): Illuminate\\Database\\Connectors\\ConnectionFactory->createConnection('sqlite', Object(Closure), '/home/lakshitha...', '', Array)
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(50): Illuminate\\Database\\Connectors\\ConnectionFactory->createSingleConnection(Array)
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(131): Illuminate\\Database\\Connectors\\ConnectionFactory->make(Array, 'sqlite')
+#17 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/DatabaseManager.php(86): Illuminate\\Database\\DatabaseManager->makeConnection('sqlite')
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(199): Illuminate\\Database\\DatabaseManager->connection('sqlite')
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(167): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getConnection()
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#21 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#24 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Util.php(36): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(90): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#27 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#28 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Container/Container.php(590): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#29 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#30 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#32 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(1011): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(272): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#38 {main}
+"} 
