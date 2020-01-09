@@ -23,11 +23,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                <a class="navbar-brand d-flex" href="{{ url('/home') }}">
                     <div><img src="/svg/carLoversLogo.jpg" style ="height: 40px; border-right :1px solid #333" class="pr-2"></div>
                     <div class="pl-2 pt-1">CarLovers</div>
                 </a>
-                <a class="navbar-brand " href="{{ url('/') }}">
+                <a class="navbar-brand " href="{{ url('/sales') }}">
                     <div class="pl-5 ">Sales</div>
                 </a>
                 <a class="navbar-brand " href="{{ url('/') }}">
