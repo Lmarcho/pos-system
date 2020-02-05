@@ -2967,3 +2967,20 @@ Did you mean one of these?
 #46 /home/lakshitha/Program/pos/pos/server.php(21): require_once('/home/lakshitha...')
 #47 {main}
 "} 
+[2020-02-05 03:10:38] local.ERROR: Command "server" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"server\" is not defined.
+
+Did you mean one of these?
+    make:observer
+    serve at /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php:670)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(236): Symfony\\Component\\Console\\Application->find('server')
+#1 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
