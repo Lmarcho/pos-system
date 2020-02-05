@@ -9,6 +9,6 @@ class SalesController extends Controller
     
     public function index()
     {
-        return view('sales');
+        return view('sales.index');
     }
 }
