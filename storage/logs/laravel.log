@@ -2861,3 +2861,109 @@ Did you mean one of these?
 #31 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #32 {main}
 "} 
+[2020-01-10 10:19:09] local.ERROR: Command "make" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make\" is not defined.
+
+Did you mean one of these?
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php:670)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(236): Symfony\\Component\\Console\\Application->find('make')
+#1 /home/lakshitha/Program/pos/pos/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /home/lakshitha/Program/pos/pos/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2020-01-11 03:26:37] local.ERROR: View [sales] not found. {"userId":1,"exception":"[object] (InvalidArgumentException(code: 0): View [sales] not found. at /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:137)
+[stacktrace]
+#0 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php(79): Illuminate\\View\\FileViewFinder->findInPaths('sales', Array)
+#1 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/View/Factory.php(131): Illuminate\\View\\FileViewFinder->find('sales')
+#2 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(975): Illuminate\\View\\Factory->make('sales', Array, Array)
+#3 /home/lakshitha/Program/pos/pos/app/Http/Controllers/SalesController.php(12): view('sales')
+#4 [internal function]: App\\Http\\Controllers\\SalesController->index()
+#5 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#6 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('index', Array)
+#7 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\SalesController), 'index')
+#8 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#9 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(681): Illuminate\\Routing\\Route->run()
+#10 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#11 /home/lakshitha/Program/pos/pos/vendor/laravel/passport/src/Http/Middleware/CreateFreshApiToken.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#12 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Laravel\\Passport\\Http\\Middleware\\CreateFreshApiToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#13 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#14 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(76): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#17 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(683): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(658): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(624): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Routing/Router.php(613): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(130): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /home/lakshitha/Program/pos/pos/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(171): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(105): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#44 /home/lakshitha/Program/pos/pos/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(110): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#45 /home/lakshitha/Program/pos/pos/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#46 /home/lakshitha/Program/pos/pos/server.php(21): require_once('/home/lakshitha...')
+#47 {main}
+"} 

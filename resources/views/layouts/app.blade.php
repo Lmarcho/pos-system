@@ -30,10 +30,10 @@
                 <a class="navbar-brand " href="{{ url('/sales') }}">
                     <div class="pl-5 ">Sales</div>
                 </a>
-                <a class="navbar-brand " href="{{ url('/') }}">
+                <a class="navbar-brand " href="{{ url('/stock') }}">
                     <div class="pl-5 ">Stock Management</div>
                 </a>
-                <a class="navbar-brand " href="{{ url('/') }}">
+                <a class="navbar-brand " href="{{ url('/customer') }}">
                     <div class="pl-5 ">Customer management</div>
                 </a>
                 <a class="navbar-brand " href="#">
