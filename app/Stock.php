@@ -10,4 +10,18 @@ class Stock extends Model
     {
         return $this->hasMany(Sales::class);
     }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+        
+    }
+
+    //table name
+    protected $table   ='stocks';
+    // primary key 
+    public $primaryKey  ='id';
+    // timestamps
+    public $timestamps  =true;
+    
+
 }

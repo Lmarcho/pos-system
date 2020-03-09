@@ -31,8 +31,9 @@
                     <div class="pl-5 ">Sales</div>
                 </a>
                 <a class="navbar-brand " href="<?php echo e(url('/stock')); ?>">
-                    <div class="pl-5 ">Stock Management</div>
+                    <div class="pl-5 ">Stock</div>
                 </a>
+
                 <a class="navbar-brand " href="<?php echo e(url('/customer')); ?>">
                     <div class="pl-5 ">Customer management</div>
                 </a>
@@ -92,7 +93,7 @@
                 </div>
             </div>
         </nav>
-
+        <?php echo $__env->make('include.messages', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <main class="py-4">
             <?php echo $__env->yieldContent('content'); ?>
         </main>
