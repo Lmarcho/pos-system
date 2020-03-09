@@ -31,8 +31,9 @@
                     <div class="pl-5 ">Sales</div>
                 </a>
                 <a class="navbar-brand " href="{{ url('/stock') }}">
-                    <div class="pl-5 ">Stock Management</div>
+                    <div class="pl-5 ">Stock</div>
                 </a>
+
                 <a class="navbar-brand " href="{{ url('/customer') }}">
                     <div class="pl-5 ">Customer management</div>
                 </a>
@@ -91,7 +92,7 @@
                 </div>
             </div>
         </nav>
-
+        @include('include.messages')
         <main class="py-4">
             @yield('content')
         </main>
