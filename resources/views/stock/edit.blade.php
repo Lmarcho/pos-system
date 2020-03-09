@@ -1,5 +1,15 @@
 @extends('layouts.app')
 @section('content')
+<script>
+    function hide_quan(x)
+    {
+        if(x==0)
+        document.getElementById('quan_field').style.display = "block";
+        else
+        document.getElementById('quan_field').style.display = "none";
+    }
+</script>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <div class="container">
     <div class="row justify-content-center">
@@ -26,9 +36,9 @@
                         <div class="form-group" >
                             {{ Form::label('type','Type') }}<br>
                             {{ Form::label('service_type','Service') }}
-                            {{ Form::radio('type', 'service',false) }}
+                            {{ Form::radio('type', 'service',$item->type == 'service' ? 'checked' : '',['onchange' => 'hide_quan(1)']) }}
                             {{ Form::label('item_type','&emsp; &emsp; Item') }}
-                            {{ Form::radio('type', 'item',false) }}
+                            {{ Form::radio('type', 'item',$item->type == 'item' ? 'checked' : '',['onchange' => 'hide_quan(0)']) }}
                         </div>
                         <div class="form-group">
                             {{ Form::label('description','Description') }}
@@ -38,10 +48,12 @@
                             {{ Form::label('amount','Amount') }}
                             {{ Form::text('amount',$item->amount,['class'=> 'form-control','placeholder'=>'Amount']) }}
                         </div>
-                        <div class="form-group">
-                            {{ Form::label('quantity','Quantity') }}
-                            {{ Form::text('quantity',$item->quantity,['class'=> 'form-control','placeholder'=>'Quantity']) }}
-                        </div>
+                       @if($item->type=='item') 
+                            <div class="form-group" id="quan_field">
+                                {{ Form::label('quantity','Quantity') }}
+                                {{ Form::text('quantity',$item->quantity,['class'=> 'form-control','placeholder'=>'Quantity']) }}
+                            </div>                       
+                        @endif
                         <div class="form-group">
                             {{Form::hidden('_method','PUT')}}
                             {{ Form::submit('Submit', ['class'=>'btn btn-primary']) }} 

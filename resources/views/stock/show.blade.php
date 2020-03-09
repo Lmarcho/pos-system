@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <div class="container">
     <div class="row justify-content-center">
@@ -29,9 +30,13 @@
                     <div>
                         Item Amount : {{$item->amount}}
                     </div>
+                    @if ($item->type=='item')
                     <div>
                         Item Quantity : {{$item->quantity}} 
                     </div>
+                        
+                    @endif
+
                     <hr>
                     <a href="/stock/{{$item->id}}/edit" class="btn btn-default">Edit</a>
                     {!! Form::open(['action'=>['StockController@destroy',$item->id],'method'=> 'POST','class'=> 'pull-right']) !!}

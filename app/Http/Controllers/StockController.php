@@ -45,7 +45,7 @@ class StockController extends Controller
             'name'=>'required|unique:stocks',
             'type'=>'required',
             'category'=>'required',
-            'description'=>'required',
+            'description'=>'required|nullable',
             'amount'=>'required|numeric',
             'quantity'=>'integer|nullable'
         ]); 
@@ -101,9 +101,9 @@ class StockController extends Controller
             'name'=>'required',
             'type'=>'required',
             'category'=>'required',
-            'description'=>'required',
+            'description'=>'required|nullable',
             'amount'=>'required|numeric',
-            'quantity'=>'integer'
+            'quantity'=>'integer|nullable'
         ]); 
 
         // submit button
