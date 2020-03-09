@@ -8,15 +8,6 @@
         else
         document.getElementById('quan_field').style.display = "none";
     }
-    function check_type()
-    {
-        x =document.getElementById(test).value;
-        console.log(x);
-        if(x=null)
-        document.getElementById('quan_field').style.display = "block";
-        else
-        document.getElementById('quan_field').style.display = "none";
-    }
 </script>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
