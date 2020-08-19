@@ -8,6 +8,7 @@ use DateTimeInterface;
 use Illuminate\Support\Facades\Route;
 use League\OAuth2\Server\ResourceServer;
 use Mockery;
+use Psr\Http\Message\ServerRequestInterface;
 
 class Passport
 {
@@ -110,6 +111,13 @@ class Passport
      * @var string
      */
     public static $clientModel = 'Laravel\Passport\Client';
+
+    /**
+     * Indicates if client's are identified by UUIDs.
+     *
+     * @var bool
+     */
+    public static $clientUuids = false;
 
     /**
      * The personal access client model class name.
@@ -429,7 +437,7 @@ class Passport
 
         $mock = Mockery::mock(ResourceServer::class);
         $mock->shouldReceive('validateAuthenticatedRequest')
-            ->andReturnUsing(function ($request) use ($token) {
+            ->andReturnUsing(function (ServerRequestInterface $request) use ($token) {
                 return $request->withAttribute('oauth_client_id', $token->client->id)
                     ->withAttribute('oauth_access_token_id', $token->id)
                     ->withAttribute('oauth_scopes', $token->scopes);
@@ -531,6 +539,27 @@ class Passport
     public static function client()
     {
         return new static::$clientModel;
+    }
+
+    /**
+     * Determine if clients are identified using UUIDs.
+     *
+     * @return bool
+     */
+    public static function clientUuids()
+    {
+        return static::$clientUuids;
+    }
+
+    /**
+     * Specify if clients are identified using UUIDs.
+     *
+     * @param  bool  $value
+     * @return void
+     */
+    public static function setClientUuids($value)
+    {
+        static::$clientUuids = $value;
     }
 
     /**

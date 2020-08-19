@@ -4,13 +4,14 @@
     function hide_quan(x)
     {
         if(x==0)
-        document.getElementById('quan_field').style.display = "block";
+        document.getElementById('quan_field').style.display = "block";//display
         else
-        document.getElementById('quan_field').style.display = "none";
+        document.getElementById('quan_field').style.display = "none";//hide
+        document.getElementById('quantity').value='';
+        
     }
 </script>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -23,7 +24,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="add_item"> <a href="/stock" class="btn btn-default "> Go Back </a></div>
+                    <div > <a href="/stock" class="btn btn-primary "> Go Back </a></div>
                         {{ Form::open(['action' => ['StockController@update',$item->id],'method' => 'POST'] ) }}
                         <div class="form-group">
                             {{ Form::label('name','Name') }}
@@ -34,10 +35,10 @@
                             {{ Form::select('category',['Car' => 'Car', 'Van' => 'Van', 'Jeep' => 'Jeep'], $item->category, ['placeholder' => 'Pick a category...']) }}
                         </div>
                         <div class="form-group" >
-                            {{ Form::label('type','Type') }}<br>
-                            {{ Form::label('service_type','Service') }}
+                            {{ Form::label('type','Type') }}
+                            {{ Form::label('service_type','Service',['class'=> 'col-sm-auto']) }}
                             {{ Form::radio('type', 'service',$item->type == 'service' ? 'checked' : '',['onchange' => 'hide_quan(1)']) }}
-                            {{ Form::label('item_type','&emsp; &emsp; Item') }}
+                            {{ Form::label('item_type','&emsp; &emsp; Item',['class'=> 'col-sm-auto']) }}
                             {{ Form::radio('type', 'item',$item->type == 'item' ? 'checked' : '',['onchange' => 'hide_quan(0)']) }}
                         </div>
                         <div class="form-group">
@@ -52,7 +53,12 @@
                             <div class="form-group" id="quan_field">
                                 {{ Form::label('quantity','Quantity') }}
                                 {{ Form::text('quantity',$item->quantity,['class'=> 'form-control','placeholder'=>'Quantity']) }}
-                            </div>                       
+                            </div>
+                        @else
+                            <div class="form-group" id="quan_field" style="display:none;">
+                                {{ Form::label('quantity','Quantity') }}
+                                {{ Form::text('quantity',$item->quantity,['class'=> 'form-control','placeholder'=>'Quantity']) }}
+                            </div>
                         @endif
                         <div class="form-group">
                             {{Form::hidden('_method','PUT')}}

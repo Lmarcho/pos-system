@@ -51,10 +51,19 @@ class PassportServiceProvider extends ServiceProvider
                 __DIR__.'/../resources/js/components' => base_path('resources/js/components/passport'),
             ], 'passport-components');
 
+            $this->publishes([
+                __DIR__.'/../database/factories' => database_path('factories'),
+            ], 'passport-factories');
+
+            $this->publishes([
+                __DIR__.'/../config/passport.php' => config_path('passport.php'),
+            ], 'passport-config');
+
             $this->commands([
                 Console\InstallCommand::class,
                 Console\ClientCommand::class,
                 Console\KeysCommand::class,
+                Console\PurgeCommand::class,
             ]);
         }
     }
@@ -66,7 +75,7 @@ class PassportServiceProvider extends ServiceProvider
      */
     protected function registerMigrations()
     {
-        if (Passport::$runsMigrations) {
+        if (Passport::$runsMigrations && ! config('passport.client_uuids')) {
             return $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         }
     }
@@ -78,14 +87,13 @@ class PassportServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if (! $this->app->configurationIsCached()) {
-            $this->mergeConfigFrom(__DIR__.'/../config/passport.php', 'passport');
-        }
+        $this->mergeConfigFrom(__DIR__.'/../config/passport.php', 'passport');
+
+        Passport::setClientUuids($this->app->make(Config::class)->get('passport.client_uuids', false));
 
         $this->registerAuthorizationServer();
         $this->registerResourceServer();
         $this->registerGuard();
-        $this->offerPublishing();
     }
 
     /**
@@ -290,19 +298,5 @@ class PassportServiceProvider extends ServiceProvider
                 Cookie::queue(Cookie::forget(Passport::cookie()));
             }
         });
-    }
-
-    /**
-     * Setup the resource publishing groups for Passport.
-     *
-     * @return void
-     */
-    protected function offerPublishing()
-    {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/passport.php' => config_path('passport.php'),
-            ], 'passport-config');
-        }
     }
 }

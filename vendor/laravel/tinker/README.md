@@ -13,17 +13,7 @@ Laravel Tinker is a powerful REPL for the Laravel framework.
 
 ## Official Documentation
 
-Documentation for Tinker can be found on the [Laravel website](https://laravel.com/docs/6.x/artisan#tinker).
-
-### Installation
-
-To get started with Laravel Tinker, simply run:
-
-    composer require laravel/tinker
-
-### Dispatching Jobs
-
-The `dispatch` helper function and `dispatch` method on the `Dispatchable` class depends on garbage collection to place the job on the queue. Therefore, when using `tinker`, you should use `Bus::dispatch` or `Queue::push` to dispatch jobs.
+Documentation for Tinker can be found on the [Laravel website](https://laravel.com/docs/artisan#tinker).
 
 ## Contributing
 

@@ -878,6 +878,8 @@ class Grammar extends BaseGrammar
      * @param  \Illuminate\Database\Query\Builder  $query
      * @param  array  $values
      * @return string
+     *
+     * @throws \RuntimeException
      */
     public function compileInsertOrIgnore(Builder $query, array $values)
     {
@@ -1144,6 +1146,8 @@ class Grammar extends BaseGrammar
      *
      * @param  string  $value
      * @return string
+     *
+     * @throws \RuntimeException
      */
     protected function wrapJsonSelector($value)
     {
@@ -1198,7 +1202,7 @@ class Grammar extends BaseGrammar
      */
     protected function wrapJsonPath($value, $delimiter = '->')
     {
-        $value = preg_replace("/([\\\\]+)?\\'/", "\\'", $value);
+        $value = preg_replace("/([\\\\]+)?\\'/", "''", $value);
 
         return '\'$."'.str_replace($delimiter, '"."', $value).'"\'';
     }

@@ -22,6 +22,8 @@ trait QueriesRelationships
      * @param  string  $boolean
      * @param  \Closure|null  $callback
      * @return \Illuminate\Database\Eloquent\Builder|static
+     *
+     * @throws \RuntimeException
      */
     public function has($relation, $operator = '>=', $count = 1, $boolean = 'and', Closure $callback = null)
     {
@@ -202,7 +204,7 @@ trait QueriesRelationships
         $types = (array) $types;
 
         if ($types === ['*']) {
-            $types = $this->model->newModelQuery()->distinct()->pluck($relation->getMorphType())->all();
+            $types = $this->model->newModelQuery()->distinct()->pluck($relation->getMorphType())->filter()->all();
 
             foreach ($types as &$type) {
                 $type = Relation::getMorphedModel($type) ?? $type;
@@ -220,8 +222,8 @@ trait QueriesRelationships
                         };
                     }
 
-                    $query->where($relation->getMorphType(), '=', (new $type)->getMorphClass())
-                        ->whereHas($belongsTo, $callback, $operator, $count);
+                    $query->where($this->query->from.'.'.$relation->getMorphType(), '=', (new $type)->getMorphClass())
+                                ->whereHas($belongsTo, $callback, $operator, $count);
                 });
             }
         }, null, null, $boolean);
