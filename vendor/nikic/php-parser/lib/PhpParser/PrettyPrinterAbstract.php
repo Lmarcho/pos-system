@@ -756,20 +756,13 @@ abstract class PrettyPrinterAbstract
                 $itemEndPos = $origArrItem->getEndTokenPos();
                 \assert($itemStartPos >= 0 && $itemEndPos >= 0);
 
-                if ($itemEndPos < $itemStartPos) {
-                    // End can be before start for Nop nodes, because offsets refer to non-whitespace
-                    // locations, which for an "empty" node might result in an inverted order.
-                    assert($origArrItem instanceof Stmt\Nop);
-                    continue;
-                }
-
                 $origIndentLevel = $this->indentLevel;
                 $lastElemIndentLevel = $this->origTokens->getIndentationBefore($itemStartPos) + $indentAdjustment;
                 $this->setIndentLevel($lastElemIndentLevel);
 
                 $comments = $arrItem->getComments();
                 $origComments = $origArrItem->getComments();
-                $commentStartPos = $origComments ? $origComments[0]->getTokenPos() : $itemStartPos;
+                $commentStartPos = $origComments ? $origComments[0]->getStartTokenPos() : $itemStartPos;
                 \assert($commentStartPos >= 0);
 
                 $commentsChanged = $comments !== $origComments;
@@ -1006,6 +999,7 @@ abstract class PrettyPrinterAbstract
             || $node instanceof Expr\ArrayDimFetch
             || $node instanceof Expr\FuncCall
             || $node instanceof Expr\MethodCall
+            || $node instanceof Expr\NullsafeMethodCall
             || $node instanceof Expr\StaticCall
             || $node instanceof Expr\Array_);
     }
@@ -1022,9 +1016,11 @@ abstract class PrettyPrinterAbstract
             || $node instanceof Node\Name
             || $node instanceof Expr\ArrayDimFetch
             || $node instanceof Expr\PropertyFetch
+            || $node instanceof Expr\NullsafePropertyFetch
             || $node instanceof Expr\StaticPropertyFetch
             || $node instanceof Expr\FuncCall
             || $node instanceof Expr\MethodCall
+            || $node instanceof Expr\NullsafeMethodCall
             || $node instanceof Expr\StaticCall
             || $node instanceof Expr\Array_
             || $node instanceof Scalar\String_
@@ -1145,11 +1141,19 @@ abstract class PrettyPrinterAbstract
                 'var' => self::FIXUP_DEREF_LHS,
                 'name' => self::FIXUP_BRACED_NAME,
             ],
+            Expr\NullsafeMethodCall::class => [
+                'var' => self::FIXUP_DEREF_LHS,
+                'name' => self::FIXUP_BRACED_NAME,
+            ],
             Expr\StaticPropertyFetch::class => [
                 'class' => self::FIXUP_DEREF_LHS,
                 'name' => self::FIXUP_VAR_BRACED_NAME,
             ],
             Expr\PropertyFetch::class => [
+                'var' => self::FIXUP_DEREF_LHS,
+                'name' => self::FIXUP_BRACED_NAME,
+            ],
+            Expr\NullsafePropertyFetch::class => [
                 'var' => self::FIXUP_DEREF_LHS,
                 'name' => self::FIXUP_BRACED_NAME,
             ],
@@ -1227,6 +1231,7 @@ abstract class PrettyPrinterAbstract
             'Param->type' => $stripRight,
             'Param->default' => $stripEquals,
             'Stmt_Break->num' => $stripBoth,
+            'Stmt_Catch->var' => $stripLeft,
             'Stmt_ClassMethod->returnType' => $stripColon,
             'Stmt_Class->extends' => ['left' => \T_EXTENDS],
             'Expr_PrintableNewAnonClass->extends' => ['left' => \T_EXTENDS],
@@ -1264,6 +1269,7 @@ abstract class PrettyPrinterAbstract
             'Param->type' => [null, false, null, ' '],
             'Param->default' => [null, false, ' = ', null],
             'Stmt_Break->num' => [\T_BREAK, false, ' ', null],
+            'Stmt_Catch->var' => [null, false, ' ', null],
             'Stmt_ClassMethod->returnType' => [')', false, ' : ', null],
             'Stmt_Class->extends' => [null, false, ' extends ', null],
             'Expr_PrintableNewAnonClass->extends' => [null, ' extends ', null],
@@ -1308,6 +1314,7 @@ abstract class PrettyPrinterAbstract
             'Expr_Isset->vars' => ', ',
             'Expr_List->items' => ', ',
             'Expr_MethodCall->args' => ', ',
+            'Expr_NullsafeMethodCall->args' => ', ',
             'Expr_New->args' => ', ',
             'Expr_PrintableNewAnonClass->args' => ', ',
             'Expr_StaticCall->args' => ', ',
@@ -1325,12 +1332,14 @@ abstract class PrettyPrinterAbstract
             'Stmt_Global->vars' => ', ',
             'Stmt_GroupUse->uses' => ', ',
             'Stmt_Interface->extends' => ', ',
+            'Stmt_Match->arms' => ', ',
             'Stmt_Property->props' => ', ',
             'Stmt_StaticVar->vars' => ', ',
             'Stmt_TraitUse->traits' => ', ',
             'Stmt_TraitUseAdaptation_Precedence->insteadof' => ', ',
             'Stmt_Unset->vars' => ', ',
             'Stmt_Use->uses' => ', ',
+            'MatchArm->conds' => ', ',
 
             // statement lists
             'Expr_Closure->stmts' => "\n",
@@ -1373,6 +1382,7 @@ abstract class PrettyPrinterAbstract
             'Expr_Closure->params' => ['(', '', ''],
             'Expr_FuncCall->args' => ['(', '', ''],
             'Expr_MethodCall->args' => ['(', '', ''],
+            'Expr_NullsafeMethodCall->args' => ['(', '', ''],
             'Expr_New->args' => ['(', '', ''],
             'Expr_PrintableNewAnonClass->args' => ['(', '', ''],
             'Expr_PrintableNewAnonClass->implements' => [null, ' implements ', ''],
@@ -1420,6 +1430,7 @@ abstract class PrettyPrinterAbstract
             'Stmt_ClassMethod->flags' => \T_FUNCTION,
             'Stmt_Class->flags' => \T_CLASS,
             'Stmt_Property->flags' => \T_VARIABLE,
+            'Param->flags' => \T_VARIABLE,
             //'Stmt_TraitUseAdaptation_Alias->newModifier' => 0, // TODO
         ];
 

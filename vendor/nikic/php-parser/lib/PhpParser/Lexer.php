@@ -34,13 +34,9 @@ class Lexer
      *                       first three. For more info see getNextToken() docs.
      */
     public function __construct(array $options = []) {
-        // map from internal tokens to PhpParser tokens
+        // Create Map from internal tokens to PhpParser tokens.
+        $this->defineCompatibilityTokens();
         $this->tokenMap = $this->createTokenMap();
-
-        // Compatibility define for PHP < 7.4
-        if (!defined('T_BAD_CHARACTER')) {
-            \define('T_BAD_CHARACTER', -1);
-        }
 
         // map of tokens to drop while lexing (the map is only used for isset lookup,
         // that's why the value is simply set to 1; the value is never actually used.)
@@ -89,7 +85,7 @@ class Lexer
 
         error_clear_last();
         $this->tokens = @token_get_all($code);
-        $this->handleErrors($errorHandler);
+        $this->postprocessTokens($errorHandler);
 
         if (false !== $scream) {
             ini_set('xdebug.scream', $scream);
@@ -131,40 +127,16 @@ class Lexer
             && substr($token[1], -2) !== '*/';
     }
 
-    /**
-     * Check whether an error *may* have occurred during tokenization.
-     *
-     * @return bool
-     */
-    private function errorMayHaveOccurred() : bool {
-        if (defined('HHVM_VERSION')) {
-            // In HHVM token_get_all() does not throw warnings, so we need to conservatively
-            // assume that an error occurred
-            return true;
-        }
-
-        if (PHP_VERSION_ID >= 80000) {
-            // PHP 8 converts the "bad character" case into a parse error, rather than treating
-            // it as a lexing warning. To preserve previous behavior, we need to assume that an
-            // error occurred.
-            // TODO: We should handle this the same way as PHP 8: Only generate T_BAD_CHARACTER
-            // token here (for older PHP versions) and leave generationg of the actual parse error
-            // to the parser. This will also save the full token scan on PHP 8 here.
-            return true;
-        }
-
-        return null !== error_get_last();
-    }
-
-    protected function handleErrors(ErrorHandler $errorHandler) {
-        if (!$this->errorMayHaveOccurred()) {
-            return;
-        }
-
+    protected function postprocessTokens(ErrorHandler $errorHandler) {
         // PHP's error handling for token_get_all() is rather bad, so if we want detailed
         // error information we need to compute it ourselves. Invalid character errors are
         // detected by finding "gaps" in the token array. Unterminated comments are detected
         // by checking if a trailing comment has a "*/" at the end.
+        //
+        // Additionally, we canonicalize to the PHP 8 comment format here, which does not include
+        // the trailing whitespace anymore.
+        //
+        // We also canonicalize to the PHP 8 T_NAME_* tokens.
 
         $filePos = 0;
         $line = 1;
@@ -176,6 +148,64 @@ class Lexer
             // In this case we only need to emit an error.
             if ($token[0] === \T_BAD_CHARACTER) {
                 $this->handleInvalidCharacterRange($filePos, $filePos + 1, $line, $errorHandler);
+            }
+
+            if ($token[0] === \T_COMMENT && substr($token[1], 0, 2) !== '/*'
+                    && preg_match('/(\r\n|\n|\r)$/D', $token[1], $matches)) {
+                $trailingNewline = $matches[0];
+                $token[1] = substr($token[1], 0, -strlen($trailingNewline));
+                $this->tokens[$i] = $token;
+                if (isset($this->tokens[$i + 1]) && $this->tokens[$i + 1][0] === \T_WHITESPACE) {
+                    // Move trailing newline into following T_WHITESPACE token, if it already exists.
+                    $this->tokens[$i + 1][1] = $trailingNewline . $this->tokens[$i + 1][1];
+                    $this->tokens[$i + 1][2]--;
+                } else {
+                    // Otherwise, we need to create a new T_WHITESPACE token.
+                    array_splice($this->tokens, $i + 1, 0, [
+                        [\T_WHITESPACE, $trailingNewline, $line],
+                    ]);
+                    $numTokens++;
+                }
+            }
+
+            // Emulate PHP 8 T_NAME_* tokens, by combining sequences of T_NS_SEPARATOR and T_STRING
+            // into a single token.
+            // TODO: Also handle reserved keywords in namespaced names.
+            if (\is_array($token)
+                    && ($token[0] === \T_NS_SEPARATOR || $token[0] === \T_STRING || $token[0] === \T_NAMESPACE)) {
+                $lastWasSeparator = $token[0] === \T_NS_SEPARATOR;
+                $text = $token[1];
+                for ($j = $i + 1; isset($this->tokens[$j]); $j++) {
+                    if ($lastWasSeparator) {
+                        if ($this->tokens[$j][0] !== \T_STRING) {
+                            break;
+                        }
+                        $lastWasSeparator = false;
+                    } else {
+                        if ($this->tokens[$j][0] !== \T_NS_SEPARATOR) {
+                            break;
+                        }
+                        $lastWasSeparator = true;
+                    }
+                    $text .= $this->tokens[$j][1];
+                }
+                if ($lastWasSeparator) {
+                    // Trailing separator is not part of the name.
+                    $j--;
+                    $text = substr($text, 0, -1);
+                }
+                if ($j > $i + 1) {
+                    if ($token[0] === \T_NS_SEPARATOR) {
+                        $type = \T_NAME_FULLY_QUALIFIED;
+                    } else if ($token[0] === \T_NAMESPACE) {
+                        $type = \T_NAME_RELATIVE;
+                    } else {
+                        $type = \T_NAME_QUALIFIED;
+                    }
+                    $token = [$type, $text, $line];
+                    array_splice($this->tokens, $i, $j - $i, [$token]);
+                    $numTokens -= $j - $i - 1;
+                }
             }
 
             $tokenValue = \is_string($token) ? $token : $token[1];
@@ -300,17 +330,23 @@ class Lexer
                 $this->line += substr_count($value, "\n");
                 $this->filePos += \strlen($value);
             } else {
+                $origLine = $this->line;
+                $origFilePos = $this->filePos;
+                $this->line += substr_count($token[1], "\n");
+                $this->filePos += \strlen($token[1]);
+
                 if (\T_COMMENT === $token[0] || \T_DOC_COMMENT === $token[0]) {
                     if ($this->attributeCommentsUsed) {
                         $comment = \T_DOC_COMMENT === $token[0]
-                            ? new Comment\Doc($token[1], $this->line, $this->filePos, $this->pos)
-                            : new Comment($token[1], $this->line, $this->filePos, $this->pos);
+                            ? new Comment\Doc($token[1],
+                                $origLine, $origFilePos, $this->pos,
+                                $this->line, $this->filePos - 1, $this->pos)
+                            : new Comment($token[1],
+                                $origLine, $origFilePos, $this->pos,
+                                $this->line, $this->filePos - 1, $this->pos);
                         $startAttributes['comments'][] = $comment;
                     }
                 }
-
-                $this->line += substr_count($token[1], "\n");
-                $this->filePos += \strlen($token[1]);
                 continue;
             }
 
@@ -367,6 +403,36 @@ class Lexer
         return substr($textAfter, strlen($matches[0]));
     }
 
+    private function defineCompatibilityTokens() {
+        // PHP 7.4
+        if (!defined('T_BAD_CHARACTER')) {
+            \define('T_BAD_CHARACTER', -1);
+        }
+        if (!defined('T_FN')) {
+            \define('T_FN', -2);
+        }
+        if (!defined('T_COALESCE_EQUAL')) {
+            \define('T_COALESCE_EQUAL', -3);
+        }
+
+        // PHP 8.0
+        if (!defined('T_NAME_QUALIFIED')) {
+            \define('T_NAME_QUALIFIED', -4);
+        }
+        if (!defined('T_NAME_FULLY_QUALIFIED')) {
+            \define('T_NAME_FULLY_QUALIFIED', -5);
+        }
+        if (!defined('T_NAME_RELATIVE')) {
+            \define('T_NAME_RELATIVE', -6);
+        }
+        if (!defined('T_MATCH')) {
+            \define('T_MATCH', -7);
+        }
+        if (!defined('T_NULLSAFE_OBJECT_OPERATOR')) {
+            \define('T_NULLSAFE_OBJECT_OPERATOR', -8);
+        }
+    }
+
     /**
      * Creates the token map.
      *
@@ -410,6 +476,15 @@ class Lexer
         if (defined('T_COMPILER_HALT_OFFSET')) {
             $tokenMap[\T_COMPILER_HALT_OFFSET] = Tokens::T_STRING;
         }
+
+        // Assign tokens for which we define compatibility constants, as token_name() does not know them.
+        $tokenMap[\T_FN] = Tokens::T_FN;
+        $tokenMap[\T_COALESCE_EQUAL] = Tokens::T_COALESCE_EQUAL;
+        $tokenMap[\T_NAME_QUALIFIED] = Tokens::T_NAME_QUALIFIED;
+        $tokenMap[\T_NAME_FULLY_QUALIFIED] = Tokens::T_NAME_FULLY_QUALIFIED;
+        $tokenMap[\T_NAME_RELATIVE] = Tokens::T_NAME_RELATIVE;
+        $tokenMap[\T_MATCH] = Tokens::T_MATCH;
+        $tokenMap[\T_NULLSAFE_OBJECT_OPERATOR] = Tokens::T_NULLSAFE_OBJECT_OPERATOR;
 
         return $tokenMap;
     }

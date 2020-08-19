@@ -10,7 +10,7 @@
     }
 </script>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -23,17 +23,17 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <div class="add_item"> <a href="/stock" class="btn btn-default "> Go Back </a></div>
+                    <div > <a href="/stock" class="btn btn-primary "> Go Back </a></div>
                         {{ Form::open(['action' => 'StockController@store','method' => 'POST'] ) }}
                         <div class="form-group">
                             {{ Form::label('name','Name') }}
                             {{ Form::text('name','',['class'=> 'form-control','placeholder'=>'Name']) }}
                         </div>
                         <div class="form-group" >
-                            {{ Form::label('type1','Type') }}<br>
-                            {{ Form::label('item_type','Item') }}
+                            {{ Form::label('type1','Type',['class'=> 'col-sm-0']) }}
+                            {{ Form::label('item_type','Item',['class'=> 'col-sm-auto']) }}
                             {{ Form::radio('type', 'item',true,['onchange' => 'hide_quan(0)']) }}
-                            {{ Form::label('service_type','&emsp; &emsp;Service') }}
+                            {{ Form::label('service_type','&emsp; &emsp; Service',['class'=> 'col-sm-auto']) }}
                             {{ Form::radio('type', 'service',false,['onchange' => 'hide_quan(1)']) }}
                         </div>
                         <div class="form-group">
@@ -56,7 +56,6 @@
                             {{ Form::submit('Submit', ['class'=>'btn btn-primary'],['onchange' => 'check_type()']) }} 
                         </div>
                         {{ Form::close() }}
-                    
                 </div>
             </div>
         </div>

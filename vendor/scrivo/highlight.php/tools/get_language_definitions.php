@@ -29,10 +29,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/**
- * Extract language definitions (JSON strings) from the large file that was
- * created using 'node launcher.js' and create a JSON file for each language.
- */
+// Extract language definitions (JSON strings) from the large file that was
+// created using 'node launcher.js' and create a JSON file for each language.
 
 $f = file("languages.dat");
 
@@ -93,6 +91,8 @@ for ($i = 0; $i < count($f); $i += 2) {
             $jsonLangDef = $patched;
         }
     }
+
+    $jsonLangDef = json_encode(json_decode($jsonLangDef), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) . "\n";
 
     if (!file_put_contents("../Highlight/languages/{$languageName}.json", $jsonLangDef)) {
         die("ERROR: Couldn't write to file.\n");
