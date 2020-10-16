@@ -9,18 +9,19 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "darryldecode/cart": "^4.2",
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/passport": "^8.0",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^1.1",
         "laravelcollective/html": "^6.0",
         "stripe/stripe-php": "^7.14"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.4",
+        "laravel/ui": "^1.0",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
         "phpunit/phpunit": "^8.0"
