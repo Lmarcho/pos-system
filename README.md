@@ -18,7 +18,6 @@ $ git clone https://github.com/Lmarcho/pos-system.git
 ```
 
 Rename the .env.example to .env and change setting accordingly.  
-Make sure the database schema also already created in your database.
 ```
 Windows -> $ copy .env.example .env
   
