@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Fucking Customer Management Dashboard
+                     Customer Management Dashboard
                 </div>
             </div>
         </div>

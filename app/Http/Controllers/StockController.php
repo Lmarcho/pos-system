@@ -14,13 +14,13 @@ class StockController extends Controller
      */
     public function index()
     {
-        //also we can use these quaries as well 
+        //also we can use these quaries as well
         // $items = Stock::all();
         // return Stock::where('name','item no 1')->get();
         // $items=DB::select('select * from stocks);
         // $items = Stock::orderBy('name','asc')->get();
-        
-        $items = Stock::orderBy('name','asc')->paginate(10); //paginate mean only 10 item for page 
+
+        $items = Stock::orderBy('name','asc')->paginate(10); //paginate mean only 10 item for page
         return view('stock.index')->with('items',$items);
     }
     /**
@@ -48,7 +48,7 @@ class StockController extends Controller
             'description'=>'required|nullable',
             'amount'=>'required|numeric',
             'quantity'=>'integer|nullable'
-        ]); 
+        ]);
 
         // submit button
         $item = new Stock;
@@ -66,7 +66,7 @@ class StockController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id 
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -82,12 +82,12 @@ class StockController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {   
+    {
         $item = Stock::find($id);
         return view('stock.edit')->with('item',$item);
-        
+
     }
-    
+
     /**
      * Update the specified resource in storage.
      *
@@ -104,7 +104,7 @@ class StockController extends Controller
             'description'=>'required|nullable',
             'amount'=>'required|numeric',
             'quantity'=>'integer|nullable'
-        ]); 
+        ]);
 
         // submit button
         $item = Stock::find($id);

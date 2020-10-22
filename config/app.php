@@ -1,7 +1,8 @@
 <?php
 
 return [
-
+    // shopping cart package
+    'Cart' => 'Melihovv\ShoppingCart\Facades\ShoppingCart',
     /*
     |--------------------------------------------------------------------------
     | Application Name

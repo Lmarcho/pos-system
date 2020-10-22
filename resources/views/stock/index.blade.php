@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('content')
 <div class="container">
 
@@ -14,14 +15,14 @@
                         </div>
                     @endif
                         <div> <a href="stock/create" class="btn btn-primary"> Add New Item </a>   </div>
-                            Fucking Stock Dashboard
+                             Stock Dashboard
                             @if(count($items)>0)
                                 @foreach ($items as $item)
                                     <div class="well">
                                     <h3><a href="/stock/{{$item->id}}"> {{$item->name}} </a></h3>
                                     </div>
                                 @endforeach
-                                {{$items->links()}} 
+                                {{$items->links()}}
                             @else
                                 <p> No items found </p>
                             @endif
